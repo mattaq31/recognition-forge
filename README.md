@@ -19,16 +19,16 @@ In order to recommend changes to a recognition, we use a generative approach tha
 ## The Repo
 Our repo is split into two major folders, `Code/` and `Outcomes`, which contain our codebase and our formal reports respectively. In `Code/`, an adventurer such as yourself will find `nnframework/`, `preprocessing/`, `'recommender/`, and `'skipthoughts/`. An empty `Data/` folder should be added alongside these as that is where our code is searching for the intended dataset to be used in this project.
 
-### preprocessing
+### preprocessing/
 This folder contains all our preprocessing steps, including part of speech analysis, `doc2vec` feature extraction, de-duplication implementations, amongst other useful little tricks.
 
-### nnframework
+### nnframework/
 This folder has our classifictaion neural network, along with inference mechanisms. We also have our LSTM implementation here.
 
-### skipthoughts
+### skipthoughts/
 This folder contains the bulk of our generative approach. As explained in its own README file, but for completeness I'll describe it here too. We used the original author's codebase, but adapted it to work in Python 3 (round brackets everywhere -- yay!). We also included small adjustments such that the architecture works for our dataset, but the bulk of the code is as per the original paper, referenced later.
 
-#### recommender
+### recommender/
 This folder contains our final recommender, which uses our generative models to recommend new *topics* based on the generation and domain-expert input. As a highlight, our method works! Details can be found in our report. :)
 
 ## Notes
