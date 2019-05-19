@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# ignore all skip-thoughts data files 
+skip-thoughts/aux_data/
+Code/skipthoughts_dir/aux_data/
+.ipynb_checkpoints/
+
 # C extensions
 *.so
 
@@ -80,3 +85,6 @@ Data/
 .history
 
 # End of https://www.gitignore.io/api/visualstudiocode
+
+#
+/**/*.ipynb_checkpoints
