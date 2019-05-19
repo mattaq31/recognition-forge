@@ -11,7 +11,7 @@ Many corporate companies have systems wherein employees can recognize or apprais
 Our task was to develop a system that can improve the quality of these recognitions, such that they are impactful to their recipients. This is a novel task for which we found no previous work.
 
 ### Classifier
-We experimented with a number of different text embeddings, such as `doc2vec`, as well as a number of transfer learning approaches, using external datasets. We implement an exhaustive search through feature combinations and achieve a 76% classification accuracy when compared to domain-expert ratings, using a fully-connected deep architecure.
+We experimented with a number of different text embeddings, such as `doc2vec`, as well as a number of transfer learning approaches, using external datasets. We implemented an exhaustive search through feature combinations and achieved a 76% classification accuracy when compared to domain-expert ratings, using a fully-connected deep architecture.
 
 ### Recommender
 In order to recommend changes to a recognition, we use a generative approach that has as input a snippet of a recognition, and is trained to predict text as output that will improve the classification score of the recognition in question. Our baseline generative model is a character-level LSTM, which empirically produces well-formatted, but largely general and non-specific text. Our more advanced model, a Skip-Thoughts model, while producing less-legible text, has better semantic relationships to the input text. This  is useful for us, as we use this text to suggest *topics* for a user to include in the recognition to improve its rating.
@@ -23,7 +23,7 @@ Our repo is split into two major folders, `Code/` and `Outcomes`, which contain 
 This folder contains all our preprocessing steps, including part of speech analysis, `doc2vec` feature extraction, de-duplication implementations, amongst other useful little tricks.
 
 ### nnframework/
-This folder has our classifictaion neural network, along with inference mechanisms. We also have our LSTM implementation here.
+This folder has our classification neural network, along with inference mechanisms. We also have our LSTM implementation here.
 
 ### skipthoughts/
 This folder contains the bulk of our generative approach. As explained in its own README file, but for completeness I'll describe it here too. We used the original author's codebase, but adapted it to work in Python 3 (round brackets everywhere -- yay!). We also included small adjustments such that the architecture works for our dataset, but the bulk of the code is as per the original paper, referenced later.
