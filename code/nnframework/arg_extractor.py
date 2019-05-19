@@ -1,3 +1,10 @@
+"""
+Parses arguments for use within classifier.
+
+Portions of this code has been adapted from https://github.com/CSTR-Edinburgh/mlpractical,
+which is copyright (c) University of Edinburgh 2015-2018. Licensed under the 
+Modified BSD License. https://opensource.org/licenses/BSD-3-Clause
+"""
 import argparse
 
 def str2bool(v):
